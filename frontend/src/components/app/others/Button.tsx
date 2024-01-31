@@ -13,8 +13,7 @@ const ReusableButton: React.FC<CustomButtonProps> = ({
   return (
     <Button
       isLoading={isLoading}
-      className="bg-button"
-      colorScheme="green"
+      className="bg-primary text-white hover:text-black hover:bg-danger"
       type="submit"
       w="100%"
       mt={5}

@@ -80,14 +80,6 @@ const SignIn = () => {
   return (
     <>
       <div className=" md:w-screen  flex flex-col items-center justify-center min-h-screen">
-        <Link href="/">
-          <div className="items-center md:py-10">
-            <Image
-              src={Logo}
-              alt=""
-            />
-          </div>
-        </Link>
         <div className="p-5 text-md font-semibold md:text-xl">
           Login into your account
         </div>
@@ -103,13 +95,11 @@ const SignIn = () => {
           <div className="px-10 flex flex-col md:gap-5 gap-3 min-w-[350px]  md:h-[409px]">
             <FormControl
               variant="floating"
-              isInvalid={!!errors.emailOrUsername?.message}
-              // isInvalid={
-              //   errors.emailOrUsername?.message
-              //     ? errors.emailOrUsername.message.length > 0
-              //     : false
-              // }
-            >
+              isInvalid={
+                errors.emailOrUsername?.message
+                  ? errors.emailOrUsername.message.length > 0
+                  : false
+              }>
               <input
                 className="custom-input"
                 placeholder="username or email"
@@ -162,7 +152,7 @@ const SignIn = () => {
                 No Account?{' '}
                 <a
                   href="/dd"
-                  className="text-button hover:underline">
+                  className="text-danger hover:underline">
                   Create Account
                 </a>
               </span>

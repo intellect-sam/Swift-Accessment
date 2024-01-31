@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <ChakraProvider>{children}</ChakraProvider>
+        <ChakraProvider>
+          <main>{children}</main>
+        </ChakraProvider>
       </body>
     </html>
   );
